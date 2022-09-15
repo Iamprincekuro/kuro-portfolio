@@ -1,10 +1,5 @@
 import { React, useState } from 'react'
 import './nav.css'
-// import { AiOutlineHome } from 'react-icons/ai'
-// import { AiOutlineUser } from 'react-icons/ai'
-// import { BiBook } from 'react-icons/bi'
-// import { MdComputer } from 'react-icons/md'
-// import { BiMessageSquareDetail } from 'react-icons/bi'
 import logo from '../../assets/logo-png.png'
 import { Icon } from 'react-icons-kit'
 import { menu } from 'react-icons-kit/feather/menu'
@@ -20,7 +15,7 @@ const Nav = () => {
 
   const [bg, setBg] = useState(false)
 const changeBg = () => {
-  if(window.scrollY >=80) {
+  if(window.scrollY >=600) {
     setBg(true)
   }
   else {
@@ -38,7 +33,7 @@ window.addEventListener('scroll', changeBg)
           <img src={logo} alt="Kuro's logo" id="img__logo" />{' '}
         </a>
         <ul className="nav__links">
-          <li>
+          <li onClick={()=> setToggle(false)}>
             <a
               href="#"
               onClick={() => setActiveNav('#')}
@@ -48,7 +43,7 @@ window.addEventListener('scroll', changeBg)
               Home
             </a>
           </li>
-          <li>
+          <li onClick={()=> setToggle(false)}>
             <a
               href="#about"
               onClick={() => setActiveNav('#about')}
@@ -58,7 +53,7 @@ window.addEventListener('scroll', changeBg)
               About
             </a>
           </li>
-          <li>
+          <li onClick={()=> setToggle(false)}>
             <a
               href="#skills"
               onClick={() => setActiveNav('#skills')}
@@ -68,7 +63,7 @@ window.addEventListener('scroll', changeBg)
               Skills
             </a>
           </li>
-          <li>
+          <li onClick={()=> setToggle(false)}>
             <a
               href="#portfolio"
               onClick={() => setActiveNav('#portfolio')}
@@ -78,7 +73,7 @@ window.addEventListener('scroll', changeBg)
               Portfolio
             </a>
           </li>
-          <li>
+          <li onClick={()=> setToggle(false)}>
             <a
               href="#contact"
               onClick={() => setActiveNav('#contact')}

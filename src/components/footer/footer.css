@@ -1,13 +1,13 @@
 footer {
-  background: var(--color-bg1);
-  padding: 3rem 0;
+  background: var(--color-black);
+  padding: 1rem 0;
   text-align: center;
   font-size: 0.9rem;
-  margin-top: 7rem;
+   color: var(--color-white);
 }
 
 footer a {
-  color: var(--color-bg);
+  color: var(--font-color);
 }
 
 .footer__logo {
@@ -42,9 +42,8 @@ footer a {
 }
 
 .footer__socials a:hover {
-  background: transparent;
-  color: var(--color-bg);
-  border-color: var(--color-bg);
+  background: var(--color-complement);
+  border-color: var(--font-color);
 }
 
 .footer__copyright {
@@ -62,5 +61,6 @@ footer a {
 
   .footer__socials {
     margin-bottom: 2.6rem;
+    gap: 0;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.css'
-import { BsLinkedin } from 'react-icons/bs' // bs is the initials of what we are importing from the library
+import { BsLinkedin } from 'react-icons/bs' 
 import { IoLogoTwitter } from 'react-icons/io'
 import { FaInstagram } from 'react-icons/fa'
 

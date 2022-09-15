@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './contact.css'
-import { MdOutlineEmail } from 'react-icons/md'
+import { MdOutlineAlternateEmail } from 'react-icons/md'
 import { BsInstagram } from 'react-icons/bs'
 import { FaWhatsapp } from 'react-icons/fa'
 //importing email js from the installed emailjs-com package
@@ -33,17 +33,17 @@ const Contact = () => {
       <div className="container contact__container">
         <div className="contact__options">
           <article className="contact__option">
-            <MdOutlineEmail className="contact__option-icon" />
+            <MdOutlineAlternateEmail className="contact__option-icon" />
             <h4>Email</h4>
             <h5>tellyprinceswag@gmail.com</h5>
-            <a href="mailto:tellyprinceswag@gmail.com">Send a message</a>
+            <a href="mailto:tellyprinceswag@gmail.com" target="_blank">Send an email</a>
           </article>
           <article className="contact__option">
             <BsInstagram className="contact__option-icon" />
             <h4>Instagram</h4>
             <h5>iamprincekuro</h5>
-            <a href="https://instagram.com/iamprincekuro">
-              Follow me on instagram
+            <a href="https://instagram.com/iamprincekuro" target="_blank">
+              Follow me on IG
             </a>
           </article>
           <article className="contact__option">
@@ -54,7 +54,7 @@ const Contact = () => {
               href="https://api.whatsapp.com/send?phone=2347080583634"
               target="_blank"
             >
-              Send a whatsapp message
+              Send a message
             </a>
           </article>
         </div>
@@ -80,7 +80,7 @@ const Contact = () => {
             placeholder="Enter your message..."
             required
           ></textarea>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn">
             Submit message
           </button>
         </form>

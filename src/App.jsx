@@ -6,8 +6,6 @@ import Skills from './components/skills/Skills'
 import Portfolio from './components/portfolio/Portfolio'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
-import Experience from './components/experience/Experience'
-import CTA from './components/header/CTA'
 
 const App = () => {
   return (
@@ -15,12 +13,11 @@ const App = () => {
       <>
         <Nav />
         <Header />
-        {/* <CTA /> */}
         <About />
-        {/* <Skills /> */}
-        {/* <Portfolio /> */}
-        {/* <Contact /> */}
-        {/* <Footer /> */}
+        <Skills />
+        <Portfolio />
+        <Contact />
+        <Footer />
       </>
     </div>
   )

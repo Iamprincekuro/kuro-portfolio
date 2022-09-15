@@ -3,9 +3,7 @@ import './portfolio.css'
 import logo from '../../../src/assets/logo.jpg'
 import a1 from '../../../src/assets/a1.jpg'
 import a2 from '../../../src/assets/a2.jpg'
-import a3 from '../../../src/assets/a3.jpg'
-import a4 from '../../../src/assets/a4.jpg'
-import a5 from '../../../src/assets/a5.jpg'
+
 
 const Portfolio = () => {
   // an array of object to help map through each images using their id

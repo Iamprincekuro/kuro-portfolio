@@ -1,8 +1,9 @@
-.container.contact__container {
-  width: 58%;
+.contact__container {
   display: grid;
-  grid-template-columns: 30% 58%;
-  gap: 12rem;
+  flex-direction: column;
+  grid-template-columns: 25% 55%;
+  gap: 10rem;
+  padding: 1rem 1rem 3rem;
 }
 
 .contact__options {
@@ -12,22 +13,13 @@
 }
 
 .contact__option {
-  /* background: var(--color-bg-variant); */
   padding: 1rem;
   border-radius: 1.2rem;
   text-align: center;
-  border: 1px solid transparent;
+  border: 2px solid var(--font-color);
   transition: var(--transition);
-  background: linear-gradient(var(--color-bg4), var(--color-bg1));
-  /* padding: 1.3rem; */
-  /* border-radius: 2rem; */
-  /* border: 1px solid transparent; */
-  /* transition: var(--transition); */
-}
-
-.contact__option:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
+  background: var(--bg-color2);
+  color: var(--font-color);
 }
 
 .contact__option-icon {
@@ -36,17 +28,20 @@
 }
 
 .contact__option a {
-  margin-top: 0.7rem;
+  margin-top: 0.5rem;
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  color: var(--font-color);
 }
 
-/* FORM STYLING */
+.contact__option a:hover {
+  color: var(--color-complement);
+}
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 0.5rem;
 }
 
 input,
@@ -54,28 +49,34 @@ textarea {
   width: 100%;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background: transparent;
-  border: 2px solid var(--color-primary-variant);
+  background: var(--bg-color2);
+  border: 1px solid var(--font-color);
   resize: none;
-  color: var(--color-white);
+  color: var(--font-color);
 }
 
 /* Media query for medium devices (tablets) */
 @media screen and (max-width: 1024px) {
   .container.contact__container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    width: 90%;
+  }
+
+  .contact__option {
+    padding: 2rem;
+    width: 16rem;
   }
 }
 
 /* Media query for small devices (mobile phones) */
 @media screen and (max-width: 600px) {
   .container.contact__container {
+    grid-template-columns: 1fr;
     width: 84%;
     gap: 2rem;
   }
-  #contact {
-    margin-top: 50rem;
-    margin-bottom: 15rem;
+
+  .contact__option {
+    padding: 2rem;
+    width: 100%;
   }
 }
