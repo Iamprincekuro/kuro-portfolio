@@ -1,4 +1,5 @@
 import { React, useState } from 'react'
+import { ToastContainer } from 'react-toast'
 import './nav.css'
 import logo from '../../assets/logo-png.png'
 import { Icon } from 'react-icons-kit'
@@ -14,26 +15,26 @@ const Nav = () => {
   }
 
   const [bg, setBg] = useState(false)
-const changeBg = () => {
-  if(window.scrollY >=600) {
-    setBg(true)
+  const changeBg = () => {
+    if (window.scrollY >= 600) {
+      setBg(true)
+    } else {
+      setBg(false)
+    }
   }
-  else {
-    setBg(false)
-  }
-}
 
-window.addEventListener('scroll', changeBg)
+  window.addEventListener('scroll', changeBg)
 
   return (
-    <nav className = {bg ? 'nav__bg' : ''}>
+    <nav className={bg ? 'nav__bg' : ''}>
+      <ToastContainer delay={5000} position={'top-center'} />
       <div className={toggle ? 'nav__container expanded' : 'nav__container'}>
         <a href="#">
           {' '}
           <img src={logo} alt="Kuro's logo" id="img__logo" />{' '}
         </a>
         <ul className="nav__links">
-          <li onClick={()=> setToggle(false)}>
+          <li onClick={() => setToggle(false)}>
             <a
               href="#"
               onClick={() => setActiveNav('#')}
@@ -43,7 +44,7 @@ window.addEventListener('scroll', changeBg)
               Home
             </a>
           </li>
-          <li onClick={()=> setToggle(false)}>
+          <li onClick={() => setToggle(false)}>
             <a
               href="#about"
               onClick={() => setActiveNav('#about')}
@@ -53,7 +54,7 @@ window.addEventListener('scroll', changeBg)
               About
             </a>
           </li>
-          <li onClick={()=> setToggle(false)}>
+          <li onClick={() => setToggle(false)}>
             <a
               href="#skills"
               onClick={() => setActiveNav('#skills')}
@@ -63,7 +64,7 @@ window.addEventListener('scroll', changeBg)
               Skills
             </a>
           </li>
-          <li onClick={()=> setToggle(false)}>
+          <li onClick={() => setToggle(false)}>
             <a
               href="#portfolio"
               onClick={() => setActiveNav('#portfolio')}
@@ -73,7 +74,7 @@ window.addEventListener('scroll', changeBg)
               Portfolio
             </a>
           </li>
-          <li onClick={()=> setToggle(false)}>
+          <li onClick={() => setToggle(false)}>
             <a
               href="#contact"
               onClick={() => setActiveNav('#contact')}

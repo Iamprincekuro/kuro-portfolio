@@ -1,10 +1,11 @@
 import React, { useRef } from 'react'
-import './contact.css'
+import { toast } from 'react-toast'
 import { MdOutlineAlternateEmail } from 'react-icons/md'
 import { BsInstagram } from 'react-icons/bs'
 import { FaWhatsapp } from 'react-icons/fa'
 //importing email js from the installed emailjs-com package
 import emailjs from 'emailjs-com'
+import './contact.css'
 
 const Contact = () => {
   const form = useRef()
@@ -12,13 +13,22 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault()
 
-    emailjs.sendForm(
-      'service_iyrwsms',
-      'template_sj7i1no',
-      form.current,
-      '67v84jmW4GVmVCvtx'
-    )
-    e.target.reset()
+    emailjs
+      .sendForm(
+        'service_iyrwsms',
+        'template_sj7i1no',
+        form.current,
+        '67v84jmW4GVmVCvtx'
+      )
+      .then(
+        function (response) {
+          e.target.reset()
+          toast.success("Message sent successfully!");
+        },
+        function (err) {
+          toast.error("Oops! Some error occurred.");
+        }
+      )
   }
   const user = {
     name: '',
@@ -36,7 +46,9 @@ const Contact = () => {
             <MdOutlineAlternateEmail className="contact__option-icon" />
             <h4>Email</h4>
             <h5>tellyprinceswag@gmail.com</h5>
-            <a href="mailto:tellyprinceswag@gmail.com" target="_blank">Send an email</a>
+            <a href="mailto:tellyprinceswag@gmail.com" target="_blank">
+              Send an email
+            </a>
           </article>
           <article className="contact__option">
             <BsInstagram className="contact__option-icon" />
