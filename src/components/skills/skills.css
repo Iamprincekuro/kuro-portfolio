@@ -158,6 +158,9 @@
     width: 32rem;
     height: 22rem;
   }
+  #skills {
+    padding-top: 2rem;
+   }
 }
 
 @media screen and (max-width: 600px) {

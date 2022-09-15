@@ -65,6 +65,9 @@ textarea {
     padding: 2rem;
     width: 16rem;
   }
+  #contact {
+    padding-top: 2rem;
+   }
 }
 
 /* Media query for small devices (mobile phones) */

@@ -11,7 +11,7 @@ const Header = () => {
         <div className="container header__container">
           <div className="right__div">
             <h1>yes, you found Prince Kuro.</h1>
-            <p>
+            <p className='header__para'>
               I'm a {' '}
               <Typed
                 strings={[

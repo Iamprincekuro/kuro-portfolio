@@ -23,10 +23,10 @@ const Contact = () => {
       .then(
         function (response) {
           e.target.reset()
-          toast.success("Message sent successfully!");
+          toast.success("Thank you for your message, I will respond shortly!");
         },
         function (err) {
-          toast.error("Oops! Some error occurred.");
+          toast.error("Your message didn't deliver. Kindly retry!");
         }
       )
   }

@@ -43,4 +43,7 @@
   .portfolio__item {
     margin: 0 -1rem;
   }
+  #portfolio {
+    padding-top: 2rem;
+   }
 }
