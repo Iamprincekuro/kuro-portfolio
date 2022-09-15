@@ -118,13 +118,13 @@ header {
   .header__container {
     grid-template-columns: 1fr;
      left: 0;
-    padding: 2rem;
+    padding: 2rem 1rem ;
     margin: 1rem;
   }
   .header__image-lg {
     top: 5rem;
     left: 0;
-    padding: 1rem;
+    width: 100%;
   }
   .header__para {
     margin-top: 0.5rem;
