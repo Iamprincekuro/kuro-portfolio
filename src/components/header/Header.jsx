@@ -15,8 +15,8 @@ const Header = () => {
               I'm a {' '}
               <Typed
                 strings={[
-                  'Frontend developer...',
-                  'Content creator...',
+                  'Frontend developer.',
+                  'Content creator.',
                   'Copywriter.',
                 ]}
                 typeSpeed={50}
